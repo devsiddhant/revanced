@@ -70,7 +70,7 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
-          repo_token: ${{ secrets.GH_PAT }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./build/*
           release_name: ReVanced
           tag: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
